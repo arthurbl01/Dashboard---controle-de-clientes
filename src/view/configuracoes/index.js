@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import React, {  } from 'react';
 import './style.css';
-import firebase from '../../config/firebase';
 import 'firebase/auth';
 import { FaCogs, FaCopy, FaComments, FaUserFriends, FaSignInAlt, FaOutdent } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 
-function Home({match}) {
+function Home() {
     return (
         <div className="dashboard">
             
@@ -14,7 +12,7 @@ function Home({match}) {
                 <div className="corpo-img-menu-vertical">
                     <FaOutdent className="img-menu-vertical" />
                 </div>
-                <img className="img-perfil-vertical" src="/img/eu.png" />
+                <img className="img-perfil-vertical" src="/img/eu.png" alt="minha-foto"/>
                 <h1 className="nome-perfil-vertical"> Arthur BL </h1>
                 <h1 className="cargo-perfil-vertical"> CEO </h1>
 
@@ -58,7 +56,7 @@ function Home({match}) {
 
                     <div className="menu-direito">
                         <button className="btn-novo-cliente">Novo Cliente</button>
-                        <img className="logo-menu" src="/img/logo.png" />
+                        <img className="logo-menu" src="/img/logo.png" alt="logo-foto"/>
 
                     </div>
                 </section>
@@ -68,10 +66,10 @@ function Home({match}) {
                     <div className="itens">
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto" />
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
@@ -79,10 +77,10 @@ function Home({match}) {
 
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
@@ -90,10 +88,10 @@ function Home({match}) {
 
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto" />
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
@@ -101,10 +99,10 @@ function Home({match}) {
 
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto" />
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
@@ -112,53 +110,42 @@ function Home({match}) {
 
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
                         </div>
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png"alt="cliente-foto" />
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
                         </div>
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
-                                <h1 className="nome-item"> Beatriz Souza </h1>
-                                <h1 className="status-item"> Ativo </h1>
-                            </div>
-                        </div>
-
-
-                        <div className="item">
-                            <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
-                            </div>
-                            <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
                         </div>
 
+
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto" />
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
@@ -166,10 +153,10 @@ function Home({match}) {
 
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
@@ -177,10 +164,10 @@ function Home({match}) {
 
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
@@ -188,30 +175,41 @@ function Home({match}) {
 
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
+                                <h1 className="nome-item"> Beatriz Souza </h1>
+                                <h1 className="status-item"> Ativo </h1>
+                            </div>
+                        </div>
+
+                        <div className="item">
+                            <div className="corpo-menu-item">
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
+                            </div>
+                            <div className="dados-item">
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
                         </div>
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="item-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>
                         </div>
                         <div className="item">
                             <div className="corpo-menu-item">
-                                <img className="menu-item" src="/img/menu-item.png" />
+                                <img className="menu-item" src="/img/menu-item.png" alt="cliente-foto"/>
                             </div>
                             <div className="dados-item">
-                                <img className="img-item" src="/img/f1.png" />
+                                <img className="img-item" src="/img/f1.png" alt="cliente-foto"/>
                                 <h1 className="nome-item"> Beatriz Souza </h1>
                                 <h1 className="status-item"> Ativo </h1>
                             </div>

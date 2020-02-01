@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './style.css';
 import { Link, Redirect } from 'react-router-dom';
-
+import  store  from '../../store';
 import firebase from '../../config/firebase';
 import 'firebase/auth';
-
+import { spinner } from '@fortawesome/free-solid-svg-icons';
 import { useSelector, useDispatch} from 'react-redux';
 
 
@@ -31,13 +31,13 @@ function Login(){
             document.getElementById("msg-erro").innerText = "Entrando...";
             document.getElementById("email").disabled = true;
             document.getElementById("senha").disabled = true;
-
+            dispatch({type: 'LOG_IN', usuarioEmail: email});
           /* Contagem de 3s para redirecionar  */
             var valor_min = 20;
             var valor_max = 40;
             setTimeout( () => {
                 verifica_abertura(valor_min, valor_max);
-                dispatch({type: 'LOG_IN', usuarioEmail: email});
+                
             }, 3000);
 
             function verifica_abertura(valor_min, valor_max) {
@@ -89,7 +89,7 @@ function Login(){
             <section className="container">
                 <div className="corpo">
                     <div className="l-esquerdo">
-                        <img className="img-login" src="/static/img-login.png" />
+                        <img className="img-login" src="/img/img-login.png" alt="img-logo-cadastro"/>
                         <h3 className="texto-l-esquerdo">Faça login com sua conta e aproveite.</h3>
                     </div>
 
@@ -100,7 +100,7 @@ function Login(){
                                 Olá!<br />
                                 <b>Bom dia!</b>
                             </div>
-                            <img className="img-logo" src="/static/img-logo.png" />
+                            <img className="img-logo" src="/img/img-logo.png" alt="img-clientes-cadastro" />
                         </div>
 
                         <h1 className="sub-titulo-login"> <b>Entre </b>com sua conta</h1>
@@ -120,7 +120,7 @@ function Login(){
 
                         <button className="btn-esq-senha"> Esqueceu sua senha? </button>
                         <button onClick={logar} id="btn-login" className="btn-login"> Login </button>
-                        <Link to='/cadastro'><button className="btn-cadastro">Novo usuário</button></Link>
+                        <button className="btn-cadastro"><Link to='/cadastro'>Novo usuário</Link></button>
                     </div>
                 </div>
             </section>
@@ -129,4 +129,7 @@ function Login(){
 
 }
 
+
 export default Login;
+
+
