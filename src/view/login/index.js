@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './style.css';
 import { Link, Redirect } from 'react-router-dom';
-import  store  from '../../store';
 import firebase from '../../config/firebase';
 import 'firebase/auth';
 import { spinner } from '@fortawesome/free-solid-svg-icons';
+
+
+
 import { useSelector, useDispatch} from 'react-redux';
 
 
@@ -23,26 +25,17 @@ function Login(){
         document.getElementById("spinner").classList.add("spinner");
         
         firebase.auth().signInWithEmailAndPassword(email, senha).then(resultado => {
-            
- 
             document.getElementById("msg-erro").style.color = "green";
             document.getElementById("email").style.color = "#CCCC";
             document.getElementById("senha").style.color = "#CCCC";
             document.getElementById("msg-erro").innerText = "Entrando...";
             document.getElementById("email").disabled = true;
             document.getElementById("senha").disabled = true;
-            dispatch({type: 'LOG_IN', usuarioEmail: email});
+            
           /* Contagem de 3s para redirecionar  */
-            var valor_min = 20;
-            var valor_max = 40;
-            setTimeout( () => {
-                verifica_abertura(valor_min, valor_max);
-                
-            }, 3000);
-
-            function verifica_abertura(valor_min, valor_max) {
-                 window.location.href = "/painel";
-            }
+            setTimeout(() =>{
+                dispatch({type: 'LOG_IN', usuarioEmail: email})       
+            },3000);    
            
             
         }).catch(erro => {
@@ -85,7 +78,7 @@ function Login(){
     
     return (
         <div className="login">
-            {useSelector(state => state.usuarioLogado) > 0 ? <Redirect to='/painel' /> : null}
+            {useSelector(state => state.usuarioLogado) == 1 ? <Redirect to='/painel' /> : null}
             <section className="container">
                 <div className="corpo">
                     <div className="l-esquerdo">
@@ -118,9 +111,9 @@ function Login(){
                             <span id="msg-erro" className="msg-erro"> </span>
                         </form>
 
-                        <button className="btn-esq-senha"> Esqueceu sua senha? </button>
+                        <button className="btn-esq-senha"><Link className="btn-esq-senha" to='/recuperar-senha'> Esqueceu sua senha? </Link></button>
                         <button onClick={logar} id="btn-login" className="btn-login"> Login </button>
-                        <button className="btn-cadastro"><Link to='/cadastro'>Novo usuário</Link></button>
+                        <button className="btn-cadastro"><Link className="btn-cadastro" to='/cadastro'>Novo usuário</Link></button>
                     </div>
                 </div>
             </section>

@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+}
+
+
+
+/* Menu Vertical */
+
+.dashboard{
+    display: flex;
+    justify-content: space-between;
+}
+
+.corpo-menu-vertical{
+    background-color: #223D54;
+    width: 20%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.corpo-img-menu-vertical{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 15px;
+    color: #FFF;
+    margin-bottom: 50px;
+    margin-right: 10px;
+}
+
+.corpo-img-menu-vertical:hover{
+    color: #1A73E8;
+}
+
+.img-perfil-vertical{
+   
+    width: 100px;
+    height: 100px;
+    margin: 0px auto ;
+}
+
+.img-menu-vertical{
+    margin-top: 10px;
+    width: 45px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.nome-perfil-vertical{
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #E6F4F4;
+}
+
+.cargo-perfil-vertical{
+    margin-top: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #E6F4F4; 
+    margin-bottom: 120px;
+}
+
+.item-menu-vertical{
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+
+.item-menu-vertical-sair{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+
+.item-menu-vertical-sair:hover{
+    background-color: #1A73E8;
+    color:#7C8487 ;
+}
+
+.item-menu-vertical:hover{
+    background-color: #1A73E8;
+    color:#7C8487 ;
+}
+
+
+
+.img-item-menu-vertical{
+    width: 32px;
+    height: 30px;
+    margin: 0px 30px;
+    color: #FFF;
+}
+
+
+.nome-item-menu-vertical{
+    margin-top: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    color: #E6F4F4; 
+}
+
+#ativo{
+    background-color: #FFF;
+
+}
+#ativo-texto{
+    color: #1A73E8;
+}
+
+#ativo-icon{
+    color: #1A73E8;
+}
+
+
+/* Menu horizontal */
+.container .corpo-itens{
+    background-color: #F1F3F4;
+    width: 80vw;
+}
+
+.menu{
+    height: 50px;
+    width: 80vw;
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-esquerdo{
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+
+
+.titulo-menu{
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 50px;
+    color: #7C8487;
+    
+}
+
+.logo-menu{
+    margin-right: 50px;
+    width: 50px;
+
+}
+
+
+
